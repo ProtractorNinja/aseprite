@@ -23,8 +23,8 @@ matrix:
 
 artifacts:
   - path: bin/aseprite.exe
-  - path: *.sln
-  - path: *.vcxproj
-  - path: *.vcxproj.filters
+  - path: \*.sln
+  - path: \*.vcxproj
+  - path: \*.vcxproj.filters
   - path: CMake*
   - path: cmake*
