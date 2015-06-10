@@ -9,7 +9,6 @@ before_build:
 
 build:
   project: aseprite.sln
-  verbosity: detailed
 
 # Build fails if one job fails
 matrix:
