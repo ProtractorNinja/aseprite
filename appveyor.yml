@@ -8,7 +8,7 @@ before_build:
   - cmake .. -G "Visual Studio 12 2013"
 
 build:
-  project: aseprite.sln
+  project: build/aseprite.sln
 
 # Build fails if one job fails
 matrix:
