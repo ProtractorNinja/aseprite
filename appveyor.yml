@@ -3,7 +3,9 @@ install:
   - git submodule update --init --recursive
 
 before_build:
-  - cmake -G "Visual Studio 12 2013"
+  - mkdir build
+  - cd build
+  - cmake .. -G "Visual Studio 12 2013"
 
 build:
   project: aseprite.sln
@@ -13,9 +15,4 @@ matrix:
   fast_finish: true
 
 artifacts:
-  - path: bin/aseprite.exe
-  - path: \*.sln
-  - path: \*.vcxproj
-  - path: \*.vcxproj.filters
-  - path: CMake*
-  - path: cmake*
+  - path: build/bin/aseprite.exe
