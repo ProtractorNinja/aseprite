@@ -1,11 +1,18 @@
 os: Visual Studio 2015 RC
 
+# Initialize all submodules; emulates git clone --recursive
 install:
   - git submodule update --init --recursive
 
 before_build:
   - cmake -G "Visual Studio 14 2015"
-  - ls
+
+configuration:
+  - Release
+
+# Build fails if one job fails
+matrix:
+  fast_finish: true
 
 platform:
   - x86
