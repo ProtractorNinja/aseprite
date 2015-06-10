@@ -10,6 +10,9 @@ before_build:
 build:
   project: aseprite.sln
 
+configuration:
+  - Release
+
 # Build fails if one job fails
 matrix:
   fast_finish: true
