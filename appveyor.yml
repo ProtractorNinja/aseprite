@@ -3,16 +3,14 @@ install:
   - git submodule update --init --recursive
 
 before_build:
-  - mkdir build
-  - cd build
-  - cmake .. -G "Visual Studio 12 2013"
+  - cmake -G "Visual Studio 12 2013"
 
 build:
-  project: build/aseprite.sln
+  project: aseprite.sln
 
 # Build fails if one job fails
 matrix:
   fast_finish: true
 
 artifacts:
-  - path: build/bin/aseprite.exe
+  - path: bin/aseprite.exe
