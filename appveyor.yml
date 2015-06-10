@@ -7,16 +7,19 @@ install:
 before_build:
   - cmake -G "Visual Studio 14 2015"
 
+platform:
+  - x86
+  - x64
+
+configuration: Release
+
 build:
   project: aseprite.sln
-
-configuration:
-  - Release
+  verbosity: detailed
 
 # Build fails if one job fails
 matrix:
   fast_finish: true
 
-platform:
-  - x86
-  - x64
+artifacts:
+  - path: bin/aseprite.exe
