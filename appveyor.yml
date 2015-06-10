@@ -1,2 +1,7 @@
+os: Visual Studio 2015 CTP
+
 install:
   - git submodule update --init --recursive
+
+before_build:
+  - cmake -G "Visual Studio 2015 CTP"
