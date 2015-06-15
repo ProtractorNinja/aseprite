@@ -1,4 +1,6 @@
 # Initialize all submodules; emulates git clone --recursive
+os: unstable
+
 install:
   - git submodule update --init --recursive
 
